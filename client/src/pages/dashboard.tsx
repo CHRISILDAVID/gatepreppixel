@@ -101,7 +101,7 @@ export default function Dashboard() {
   const yesterdayStats = calculateStats(yesterdaySessions);
   const allTimeStats = calculateStats(allSessions);
 
-  const SessionCard = ({ session, onClick }: { session: StudySession; onClick: () => void }) => (
+  const SessionCard = ({ session, onClick, showDate = false }: { session: StudySession; onClick: () => void; showDate?: boolean }) => (
     <div className="relative group">
       <button
         onClick={onClick}
@@ -109,8 +109,14 @@ export default function Dashboard() {
         data-testid={`session-${session.id}`}
       >
         <div className="flex items-start justify-between mb-2">
-          <div>
+          <div className="flex-1">
             <p className="font-bold text-sm">{session.subject || "General Study"}</p>
+            {showDate && (
+              <p className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
+                <Calendar className="w-3 h-3" />
+                {format(parseISO(session.date), "MMM dd, yyyy")}
+              </p>
+            )}
             <p className="text-xs text-muted-foreground">
               {session.startTime} - {session.endTime || "Ongoing"}
             </p>
@@ -327,6 +333,7 @@ export default function Dashboard() {
                       key={session.id}
                       session={session}
                       onClick={() => setSelectedSession(session)}
+                      showDate={true}
                     />
                   ))}
               </div>

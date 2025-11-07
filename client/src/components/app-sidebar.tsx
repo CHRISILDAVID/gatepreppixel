@@ -28,7 +28,7 @@ const menuItems = [
     icon: Target,
   },
   {
-    title: "Schedule",
+    title: "Schedule(^_^)",
     url: "/schedule",
     icon: Calendar,
   },

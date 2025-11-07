@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { useStudyTimer } from "@/hooks/use-study-timer";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { Topic } from "@shared/schema";
 import { Play, Pause, Square } from "lucide-react";
@@ -13,12 +13,20 @@ import { format } from "date-fns";
 
 export default function StudySession() {
   const { toast } = useToast();
-  const [isRunning, setIsRunning] = useState(false);
-  const [seconds, setSeconds] = useState(0);
-  const [selectedSubject, setSelectedSubject] = useState<string>("");
-  const [selectedTopic, setSelectedTopic] = useState<string>("");
-  const [notes, setNotes] = useState("");
-  const [startTime, setStartTime] = useState("");
+  const {
+    isRunning,
+    seconds,
+    startTime,
+    selectedSubject,
+    selectedTopic,
+    notes,
+    startTimer,
+    pauseTimer,
+    resetTimer,
+    updateSubject,
+    updateTopic,
+    updateNotes,
+  } = useStudyTimer();
 
   const { data: topics } = useQuery<Topic[]>({
     queryKey: ["/api/topics"],
@@ -38,32 +46,16 @@ export default function StudySession() {
         title: "SESSION SAVED",
         description: "Your study session has been logged successfully.",
       });
-      setSeconds(0);
-      setNotes("");
-      setSelectedSubject("");
-      setSelectedTopic("");
+      resetTimer();
     },
   });
 
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isRunning) {
-      interval = setInterval(() => {
-        setSeconds((s) => s + 1);
-      }, 1000);
-    }
-    return () => clearInterval(interval);
-  }, [isRunning]);
-
   const handleStart = () => {
-    if (!isRunning) {
-      setStartTime(format(new Date(), "HH:mm"));
-    }
-    setIsRunning(true);
+    startTimer(format(new Date(), "HH:mm"));
   };
 
   const handlePause = () => {
-    setIsRunning(false);
+    pauseTimer();
   };
 
   const handleStop = () => {
@@ -90,7 +82,7 @@ export default function StudySession() {
       imageProof: null,
     });
 
-    setIsRunning(false);
+    pauseTimer();
   };
 
   const hours = Math.floor(seconds / 3600);
@@ -167,7 +159,7 @@ export default function StudySession() {
               <Label htmlFor="subject" className="text-sm font-bold mb-2 block">
                 SUBJECT
               </Label>
-              <Select value={selectedSubject} onValueChange={setSelectedSubject}>
+              <Select value={selectedSubject} onValueChange={updateSubject}>
                 <SelectTrigger
                   id="subject"
                   className="border-2 border-foreground"
@@ -191,7 +183,7 @@ export default function StudySession() {
               </Label>
               <Select
                 value={selectedTopic}
-                onValueChange={setSelectedTopic}
+                onValueChange={updateTopic}
                 disabled={!selectedSubject}
               >
                 <SelectTrigger
@@ -219,7 +211,7 @@ export default function StudySession() {
             <Textarea
               id="notes"
               value={notes}
-              onChange={(e) => setNotes(e.target.value)}
+              onChange={(e) => updateNotes(e.target.value)}
               placeholder="Add notes about your study session..."
               className="border-2 border-foreground min-h-24"
               data-testid="input-notes"

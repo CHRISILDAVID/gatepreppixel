@@ -14,23 +14,23 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  --background: 220 27% 94%;
+  --background: 40 40% 88%;
 
-  --foreground: 220 16% 22%;
+  --foreground: 25 40% 25%;
 
-  --border: 220 16% 22%;
+  --border: 25 40% 25%;
 
-  --card: 220 27% 94%;
+  --card: 40 40% 88%;
 
-  --card-foreground: 220 16% 22%;
+  --card-foreground: 25 40% 25%;
 
-  --card-border: 220 16% 22%;
+  --card-border: 25 40% 25%;
 
-  --sidebar: 220 16% 18%;
+  --sidebar: 25 40% 20%;
 
-  --sidebar-foreground: 0 0% 96%;
+  --sidebar-foreground: 40 35% 85%;
 
-  --sidebar-border: 220 16% 22%;
+  --sidebar-border: 25 40% 25%;
 
   --sidebar-primary: 213 32% 52%;
 
@@ -42,27 +42,27 @@
 
   --sidebar-ring: 213 32% 52%;
 
-  --popover: 220 27% 94%;
+  --popover: 40 40% 88%;
 
-  --popover-foreground: 220 16% 22%;
+  --popover-foreground: 25 40% 25%;
 
-  --popover-border: 220 16% 22%;
+  --popover-border: 25 40% 25%;
 
-  --primary: 213 32% 52%;
+  --primary: 213 38% 52%;
 
   --primary-foreground: 0 0% 98%;
 
-  --secondary: 213 32% 52%;
+  --secondary: 213 38% 52%;
 
   --secondary-foreground: 0 0% 98%;
 
-  --muted: 220 16% 22%;
+    --muted: 25 40% 30%;
 
-  --muted-foreground: 220 27% 94%;
+  --muted-foreground: 25 35% 45%;
 
-  --accent: 193 43% 67%;
+  --accent: 193 48% 67%;
 
-  --accent-foreground: 220 16% 22%;
+  --accent-foreground: 220 20% 18%;
 
   --destructive: 354 70% 54%;
 
@@ -78,18 +78,18 @@
   --success: 92 28% 65%;
   --success-foreground: 220 16% 22%;
 
-  --font-sans: "JetBrains Mono", "Fira Code", monospace;
-  --font-serif: "JetBrains Mono", "Fira Code", monospace;
-  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-sans: "Silkscreen", "Press Start 2P", cursive;
+  --font-serif: "Press Start 2P", cursive;
+  --font-mono: "VT323", monospace;
   --radius: 0rem;
-  --shadow-2xs: 2px 2px 0px 0px hsl(220 16% 22%);
-  --shadow-xs: 2px 2px 0px 0px hsl(220 16% 22%);
-  --shadow-sm: 3px 3px 0px 0px hsl(220 16% 22%);
-  --shadow: 4px 4px 0px 0px hsl(220 16% 22%);
-  --shadow-md: 4px 4px 0px 0px hsl(220 16% 22%);
-  --shadow-lg: 6px 6px 0px 0px hsl(220 16% 22%);
-  --shadow-xl: 8px 8px 0px 0px hsl(220 16% 22%);
-  --shadow-2xl: 10px 10px 0px 0px hsl(220 16% 22%);
+  --shadow-2xs: 2px 2px 0px 0px hsl(25 40% 25%);
+  --shadow-xs: 2px 2px 0px 0px hsl(25 40% 25%);
+  --shadow-sm: 3px 3px 0px 0px hsl(25 40% 25%);
+  --shadow: 4px 4px 0px 0px hsl(25 40% 25%);
+  --shadow-md: 4px 4px 0px 0px hsl(25 40% 25%);
+  --shadow-lg: 6px 6px 0px 0px hsl(25 40% 25%);
+  --shadow-xl: 8px 8px 0px 0px hsl(25 40% 25%);
+  --shadow-2xl: 10px 10px 0px 0px hsl(25 40% 25%);
   --tracking-normal: 0.05em;
   --spacing: 8px;
 
@@ -134,23 +134,23 @@
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  --background: 220 16% 18%;
+  --background: 25 40% 15%;
 
-  --foreground: 0 0% 96%;
+  --foreground: 40 35% 85%;
 
-  --border: 0 0% 96%;
+  --border: 40 35% 85%;
 
-  --card: 220 16% 18%;
+  --card: 25 40% 15%;
 
-  --card-foreground: 0 0% 96%;
+  --card-foreground: 40 35% 85%;
 
-  --card-border: 0 0% 96%;
+  --card-border: 40 35% 85%;
 
-  --sidebar: 220 16% 13%;
+  --sidebar: 25 40% 12%;
 
-  --sidebar-foreground: 0 0% 96%;
+  --sidebar-foreground: 40 35% 85%;
 
-  --sidebar-border: 0 0% 96%;
+  --sidebar-border: 40 35% 85%;
 
   --sidebar-primary: 213 32% 52%;
 
@@ -162,11 +162,11 @@
 
   --sidebar-ring: 213 32% 52%;
 
-  --popover: 220 16% 18%;
+  --popover: 25 40% 15%;
 
-  --popover-foreground: 0 0% 96%;
+  --popover-foreground: 40 35% 85%;
 
-  --popover-border: 0 0% 96%;
+  --popover-border: 40 35% 85%;
 
   --primary: 213 32% 52%;
 
@@ -176,9 +176,9 @@
 
   --secondary-foreground: 0 0% 98%;
 
-  --muted: 0 0% 96%;
+  --muted: 40 35% 85%;
 
-  --muted-foreground: 220 16% 18%;
+  --muted-foreground: 25 40% 15%;
 
   --accent: 193 43% 67%;
 
@@ -198,14 +198,14 @@
   --success: 92 28% 65%;
   --success-foreground: 220 16% 13%;
 
-  --shadow-2xs: 2px 2px 0px 0px hsl(0 0% 96%);
-  --shadow-xs: 2px 2px 0px 0px hsl(0 0% 96%);
-  --shadow-sm: 3px 3px 0px 0px hsl(0 0% 96%);
-  --shadow: 4px 4px 0px 0px hsl(0 0% 96%);
-  --shadow-md: 4px 4px 0px 0px hsl(0 0% 96%);
-  --shadow-lg: 6px 6px 0px 0px hsl(0 0% 96%);
-  --shadow-xl: 8px 8px 0px 0px hsl(0 0% 96%);
-  --shadow-2xl: 10px 10px 0px 0px hsl(0 0% 96%);
+  --shadow-2xs: 2px 2px 0px 0px hsl(40 35% 85%);
+  --shadow-xs: 2px 2px 0px 0px hsl(40 35% 85%);
+  --shadow-sm: 3px 3px 0px 0px hsl(40 35% 85%);
+  --shadow: 4px 4px 0px 0px hsl(40 35% 85%);
+  --shadow-md: 4px 4px 0px 0px hsl(40 35% 85%);
+  --shadow-lg: 6px 6px 0px 0px hsl(40 35% 85%);
+  --shadow-xl: 8px 8px 0px 0px hsl(40 35% 85%);
+  --shadow-2xl: 10px 10px 0px 0px hsl(40 35% 85%);
 
   /* Fallback for older browsers */
   --sidebar-primary-border: hsl(var(--sidebar-primary));
@@ -239,10 +239,61 @@
 @layer base {
   * {
     @apply border-border;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
   }
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Better placeholder visibility */
+  ::placeholder {
+    color: hsl(25, 30%, 50%) !important;
+    opacity: 1 !important;
+  }
+  
+  :-ms-input-placeholder {
+    color: hsl(25, 30%, 50%) !important;
+  }
+  
+  ::-ms-input-placeholder {
+    color: hsl(25, 30%, 50%) !important;
+  }
+  
+  /* Select dropdown placeholder visibility */
+  [data-placeholder] {
+    color: hsl(25, 30%, 50%) !important;
+  }
+  
+  /* Better readability for pixel fonts */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.125rem; }
+  
+  p, span, div {
+    letter-spacing: 0.025em;
+  }
+  
+  /* Make small text more readable */
+  .text-xs {
+    font-size: 0.875rem !important;
+  }
+  
+  .text-sm {
+    font-size: 1rem !important;
   }
 }
 
@@ -267,6 +318,15 @@
  * need to be distinguished from eachother visually.
  */
 @layer utilities {
+
+  /* Pixel art transition utilities */
+  .pixel-transition {
+    transition-timing-function: steps(3);
+  }
+  
+  .pixel-transition-slow {
+    transition-timing-function: steps(5);
+  }
 
   /* Hide ugly search cancel button in Chrome until we can style it properly */
   input[type="search"]::-webkit-search-cancel-button {
