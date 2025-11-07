@@ -1,13 +1,13 @@
 import { useState, useEffect, useCallback } from "react";
 
 interface TimerState {
-  isRunning: boolean;
-  seconds: number;
-  startTime: string;
+  startTime: string; // HH:mm format for display
+  sessionStartedAt: number | null; // Timestamp when timer started (for elapsed calculation)
+  pausedDuration: number; // Total seconds paused (accumulated when pausing)
+  pausedAt: number | null; // Timestamp when timer was paused
   selectedSubject: string;
   selectedTopic: string;
   notes: string;
-  sessionStartedAt: number | null;
 }
 
 const STORAGE_KEY = "study-timer-state";
@@ -16,29 +16,20 @@ function loadTimerState(): TimerState {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
-      const state = JSON.parse(stored);
-      // If timer was running, calculate elapsed time
-      if (state.isRunning && state.sessionStartedAt) {
-        const elapsed = Math.floor((Date.now() - state.sessionStartedAt) / 1000);
-        return {
-          ...state,
-          seconds: state.seconds + elapsed,
-        };
-      }
-      return state;
+      return JSON.parse(stored);
     }
   } catch (error) {
     console.error("Failed to load timer state:", error);
   }
   
   return {
-    isRunning: false,
-    seconds: 0,
     startTime: "",
+    sessionStartedAt: null,
+    pausedDuration: 0,
+    pausedAt: null,
     selectedSubject: "",
     selectedTopic: "",
     notes: "",
-    sessionStartedAt: null,
   };
 }
 
@@ -50,55 +41,88 @@ function saveTimerState(state: TimerState) {
   }
 }
 
+function calculateElapsedSeconds(state: TimerState): number {
+  if (!state.sessionStartedAt) return 0;
+  
+  const now = Date.now();
+  const totalElapsed = Math.floor((now - state.sessionStartedAt) / 1000);
+  
+  // Subtract paused time
+  let pausedTime = state.pausedDuration;
+  if (state.pausedAt) {
+    // Currently paused, add current pause duration
+    pausedTime += Math.floor((now - state.pausedAt) / 1000);
+  }
+  
+  return Math.max(0, totalElapsed - pausedTime);
+}
+
 export function useStudyTimer() {
   const [state, setState] = useState<TimerState>(loadTimerState);
+  const [displaySeconds, setDisplaySeconds] = useState<number>(() => calculateElapsedSeconds(loadTimerState()));
+
+  const isRunning = state.sessionStartedAt !== null && state.pausedAt === null;
 
   // Sync state to localStorage whenever it changes
   useEffect(() => {
     saveTimerState(state);
   }, [state]);
 
-  // Timer tick effect
+  // Timer tick effect - updates display every second
   useEffect(() => {
     let interval: NodeJS.Timeout;
-    if (state.isRunning) {
+    if (isRunning) {
       interval = setInterval(() => {
-        setState((prev) => ({
-          ...prev,
-          seconds: prev.seconds + 1,
-        }));
+        setDisplaySeconds(calculateElapsedSeconds(state));
       }, 1000);
+    } else {
+      setDisplaySeconds(calculateElapsedSeconds(state));
     }
     return () => clearInterval(interval);
-  }, [state.isRunning]);
+  }, [isRunning, state]);
 
   const startTimer = useCallback((startTime: string) => {
-    setState((prev) => ({
-      ...prev,
-      isRunning: true,
-      startTime: prev.startTime || startTime,
-      sessionStartedAt: Date.now(),
-    }));
+    setState((prev) => {
+      if (prev.sessionStartedAt === null) {
+        // Starting fresh
+        return {
+          ...prev,
+          startTime,
+          sessionStartedAt: Date.now(),
+          pausedDuration: 0,
+          pausedAt: null,
+        };
+      } else if (prev.pausedAt !== null) {
+        // Resuming from pause
+        const pauseDuration = Math.floor((Date.now() - prev.pausedAt) / 1000);
+        return {
+          ...prev,
+          pausedDuration: prev.pausedDuration + pauseDuration,
+          pausedAt: null,
+        };
+      }
+      return prev;
+    });
   }, []);
 
   const pauseTimer = useCallback(() => {
     setState((prev) => ({
       ...prev,
-      isRunning: false,
-      sessionStartedAt: null,
+      pausedAt: Date.now(),
     }));
   }, []);
 
   const resetTimer = useCallback(() => {
     setState({
-      isRunning: false,
-      seconds: 0,
       startTime: "",
+      sessionStartedAt: null,
+      pausedDuration: 0,
+      pausedAt: null,
       selectedSubject: "",
       selectedTopic: "",
       notes: "",
-      sessionStartedAt: null,
     });
+    setDisplaySeconds(0);
     localStorage.removeItem(STORAGE_KEY);
   }, []);
 
@@ -115,8 +139,8 @@ export function useStudyTimer() {
   }, []);
 
   return {
-    isRunning: state.isRunning,
-    seconds: state.seconds,
+    isRunning,
+    seconds: displaySeconds,
     startTime: state.startTime,
     selectedSubject: state.selectedSubject,
     selectedTopic: state.selectedTopic,
