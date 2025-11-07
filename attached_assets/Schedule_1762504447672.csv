@@ -1,0 +1,62 @@
+Week,Date,Topics to Cover,Study Type,Study Hours
+1,Nov 7,"Linear Algebra: Vector space, subspaces, linear dependence and independence of vectors",Theory + Problems,4-5 hours
+1,Nov 8,"Linear Algebra: Matrices, projection matrix, orthogonal matrix, idempotent matrix, partition matrix, properties of matrices",Theory + Problems,4-5 hours
+1,Nov 9,"Linear Algebra: Systems of linear equations and solutions, Gaussian elimination",Theory + Problems,4-5 hours
+1,Nov 10,"Linear Algebra: Eigenvalues and eigenvectors, determinant, rank, nullity, projections",Theory + Problems,4-5 hours
+1,Nov 11,"Linear Algebra: LU decomposition, singular value decomposition, quadratic forms + Practice",Theory + Problems,4-5 hours
+1,Nov 12,"Calculus: Functions of a single variable, limit, continuity, differentiability",Theory + Problems,4-5 hours
+1,Nov 13,"Calculus: Taylor series, maxima and minima, optimization involving a single variable + Practice",Theory + Problems,4-5 hours
+2,Nov 14,"Probability: Counting (permutation and combinations), probability axioms, Sample space, events, independent events, mutually exclusive events",Theory + Problems,4-5 hours
+2,Nov 15,"Probability: Marginal probability, conditional probability, joint probability, Bayes Theorem",Theory + Problems,4-5 hours
+2,Nov 16,"Probability: Random variables, discrete random variables, probability mass functions, uniform (discrete), Bernoulli distribution, binomial distribution",Theory + Problems,4-5 hours
+2,Nov 17,"Probability: Continuous random variables, probability distribution function, cumulative distribution function, uniform (continuous), exponential distribution",Theory + Problems,4-5 hours
+2,Nov 18,"Probability: Poisson distribution, normal distribution, standard normal, t-distribution, chi-squared distribution, Conditional PDF",Theory + Problems,4-5 hours
+2,Nov 19,"Statistics: Mean, median, mode, standard deviation, correlation, covariance, conditional expectation and variance",Theory + Problems,4-5 hours
+2,Nov 20,"Statistics: Central limit theorem, confidence interval, z-test, t-test, chi-squared test + Practice",Theory + Problems,4-5 hours
+3,Nov 21,"Python Programming: Programming in Python - basics, data types, control structures, functions, object-oriented concepts",Theory + Coding,5-6 hours
+3,Nov 22,"Data Structures: Stacks, queues, linked lists - implementation and operations",Theory + Coding,5-6 hours
+3,Nov 23,"Data Structures: Trees, hash tables - implementation and operations",Theory + Coding,5-6 hours
+3,Nov 24,"Algorithms: Linear search, binary search - analysis and implementation",Theory + Coding,5-6 hours
+3,Nov 25,"Algorithms: Selection sort, bubble sort, insertion sort - analysis and implementation",Theory + Coding,5-6 hours
+3,Nov 26,"Algorithms: Mergesort, quicksort - divide and conquer approach",Theory + Coding,5-6 hours
+3,Nov 27,"Graph Theory: Introduction to graph theory, graph traversals (BFS, DFS), shortest path algorithms + Practice",Theory + Coding,5-6 hours
+4,Nov 28,"DBMS: ER-model, data types - entity relationships and modeling",Theory + Practice,4-5 hours
+4,Nov 29,"DBMS: Relational model - relational algebra, tuple calculus",Theory + Practice,4-5 hours
+4,Nov 30,"DBMS: SQL - queries, joins, aggregations, subqueries",Theory + Practice,4-5 hours
+4,Dec 1,"DBMS: Integrity constraints, normal form, functional dependencies",Theory + Practice,4-5 hours
+4,Dec 2,"DBMS: Normalization - 1NF, 2NF, 3NF, BCNF + Problems",Theory + Practice,4-5 hours
+4,Dec 3,"DBMS: File organization, indexing - B-trees, B+ trees, hashing",Theory + Practice,4-5 hours
+4,Dec 4,"Data Warehousing: Data transformation - normalization, discretization, sampling, compression",Theory + Practice,4-5 hours
+5,Dec 5,"Data Warehousing: Data warehouse modelling - schema for multidimensional data models, concept hierarchies",Theory + Practice,5-6 hours
+5,Dec 6,"Data Warehousing: Measures - categorization and computations + Practice Problems",Theory + Practice,5-6 hours
+5,Dec 7,"Machine Learning: Introduction - regression and classification problems, simple linear regression",Theory + Practice,5-6 hours
+5,Dec 8,"ML Regression: Multiple linear regression, ridge regression",Theory + Practice,5-6 hours
+5,Dec 9,"ML Classification: Logistic regression, k-nearest neighbour",Theory + Practice,5-6 hours
+5,Dec 10,"ML Classification: Naive Bayes classifier, linear discriminant analysis",Theory + Practice,5-6 hours
+5,Dec 11,"ML Classification: Support vector machine, decision trees",Theory + Practice,5-6 hours
+6,Dec 12,"ML Evaluation: Bias-variance trade-off, leave-one-out (LOO) cross-validation, k-folds cross-validation",Theory + Practice,5-6 hours
+6,Dec 13,"ML Neural Networks: Multi-layer perceptron, feed-forward neural network",Theory + Practice,5-6 hours
+6,Dec 14,"ML Unsupervised: Clustering algorithms, k-means, k-medoid",Theory + Practice,5-6 hours
+6,Dec 15,"ML Unsupervised: Hierarchical clustering, top-down clustering, bottom-up clustering",Theory + Practice,5-6 hours
+6,Dec 16,"ML Unsupervised: Single-linkage, multiple-linkage methods in hierarchical clustering",Theory + Practice,5-6 hours
+6,Dec 17,"ML Unsupervised: Dimensionality reduction, principal component analysis (PCA)",Theory + Practice,5-6 hours
+6,Dec 18,"ML Comprehensive Practice: All supervised and unsupervised algorithms + numerical problems",Theory + Practice,5-6 hours
+7,Dec 19,"AI Search: Informed search, uninformed search strategies and algorithms",Theory + Practice,4-5 hours
+7,Dec 20,"AI Search: Adversarial search - minimax, alpha-beta pruning, game trees",Theory + Practice,4-5 hours
+7,Dec 21,"AI Logic: Propositional logic, predicate logic - syntax, semantics, inference",Theory + Practice,4-5 hours
+7,Dec 22,"AI Reasoning: Reasoning under uncertainty - conditional independence representation",Theory + Practice,4-5 hours
+7,Dec 23,"AI Reasoning: Exact inference through variable elimination",Theory + Practice,4-5 hours
+7,Dec 24,"AI Reasoning: Approximate inference through sampling + Practice Problems",Theory + Practice,4-5 hours
+7,Dec 25,"Christmas Break: Light review of ML and AI key concepts",Theory + Practice,2-3 hours
+8,Dec 26,"Comprehensive Review: Linear Algebra - all 19 topics (vector spaces through SVD)",Review + Practice,5-6 hours
+8,Dec 27,"Comprehensive Review: Calculus and Optimization - all 7 topics + problem solving",Review + Practice,5-6 hours
+8,Dec 28,"Comprehensive Review: Probability - all probability topics (counting through distributions)",Review + Practice,5-6 hours
+8,Dec 29,"Comprehensive Review: Statistics - all statistics topics (mean through hypothesis testing)",Review + Practice,5-6 hours
+8,Dec 30,"Comprehensive Review: Programming and DSA - Python, data structures, algorithms, graph theory",Review + Practice,5-6 hours
+8,Dec 31,"Comprehensive Review: DBMS and Data Warehousing - all 16 topics + SQL practice",Review + Practice,5-6 hours
+8,Jan 1,"New Year Break: Mock test covering all subjects + self-assessment",Review + Practice,3-4 hours
+9,Jan 2,"Final Review: Machine Learning - all 25 supervised and unsupervised topics",Mock Tests + Revision,6-7 hours
+9,Jan 3,"Final Review: AI - all 8 topics (search, logic, reasoning) + mock problems",Mock Tests + Revision,6-7 hours
+9,Jan 4,"Complete Mock Test: Full GATE DA format covering all 130 topics + detailed analysis",Mock Tests + Revision,6-7 hours
+9,Jan 5,"Weak Areas Focus: Target identified problem areas from all subjects + formula revision",Mock Tests + Revision,6-7 hours
+9,Jan 6,"Final Preparation: Quick revision of high-weightage topics + confidence building + rest",Mock Tests + Revision,2-3 hours

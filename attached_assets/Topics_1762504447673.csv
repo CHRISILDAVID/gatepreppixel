@@ -1,0 +1,131 @@
+No.,Subject,Topic
+1,Probability and Statistics,Counting (permutation and combinations)
+2,Probability and Statistics,probability axioms
+3,Probability and Statistics,Sample space
+4,Probability and Statistics,events
+5,Probability and Statistics,independent events
+6,Probability and Statistics,mutually exclusive events
+7,Probability and Statistics,marginal probability
+8,Probability and Statistics,conditional probability
+9,Probability and Statistics,joint probability
+10,Probability and Statistics,Bayes Theorem
+11,Probability and Statistics,conditional expectation and variance
+12,Probability and Statistics,mean
+13,Probability and Statistics,median
+14,Probability and Statistics,mode
+15,Probability and Statistics,standard deviation
+16,Probability and Statistics,correlation
+17,Probability and Statistics,covariance
+18,Probability and Statistics,random variables
+19,Probability and Statistics,discrete random variables
+20,Probability and Statistics,probability mass functions
+21,Probability and Statistics,uniform (discrete)
+22,Probability and Statistics,Bernoulli distribution
+23,Probability and Statistics,binomial distribution
+24,Probability and Statistics,Continuous random variables
+25,Probability and Statistics,probability distribution function
+26,Probability and Statistics,uniform (continuous)
+27,Probability and Statistics,exponential distribution
+28,Probability and Statistics,Poisson distribution
+29,Probability and Statistics,normal distribution
+30,Probability and Statistics,standard normal
+31,Probability and Statistics,t-distribution
+32,Probability and Statistics,chi-squared distribution
+33,Probability and Statistics,cumulative distribution function
+34,Probability and Statistics,Conditional PDF
+35,Probability and Statistics,Central limit theorem
+36,Probability and Statistics,confidence interval
+37,Probability and Statistics,z-test
+38,Probability and Statistics,t-test
+39,Probability and Statistics,chi-squared test
+40,Linear Algebra,Vector space
+41,Linear Algebra,subspaces
+42,Linear Algebra,linear dependence and independence of vectors
+43,Linear Algebra,matrices
+44,Linear Algebra,projection matrix
+45,Linear Algebra,orthogonal matrix
+46,Linear Algebra,idempotent matrix
+47,Linear Algebra,partition matrix
+48,Linear Algebra,properties of matrices
+49,Linear Algebra,quadratic forms
+50,Linear Algebra,systems of linear equations and solutions
+51,Linear Algebra,Gaussian elimination
+52,Linear Algebra,eigenvalues and eigenvectors
+53,Linear Algebra,determinant
+54,Linear Algebra,rank
+55,Linear Algebra,nullity
+56,Linear Algebra,projections
+57,Linear Algebra,LU decomposition
+58,Linear Algebra,singular value decomposition
+59,Calculus and Optimization,Functions of a single variable
+60,Calculus and Optimization,limit
+61,Calculus and Optimization,continuity
+62,Calculus and Optimization,differentiability
+63,Calculus and Optimization,Taylor series
+64,Calculus and Optimization,maxima and minima
+65,Calculus and Optimization,optimization involving a single variable
+66,"Programming, Data Structures and Algorithms",Programming in Python
+67,"Programming, Data Structures and Algorithms",stacks
+68,"Programming, Data Structures and Algorithms",queues
+69,"Programming, Data Structures and Algorithms",linked lists
+70,"Programming, Data Structures and Algorithms",trees
+71,"Programming, Data Structures and Algorithms",hash tables
+72,"Programming, Data Structures and Algorithms",linear search
+73,"Programming, Data Structures and Algorithms",binary search
+74,"Programming, Data Structures and Algorithms",selection sort
+75,"Programming, Data Structures and Algorithms",bubble sort
+76,"Programming, Data Structures and Algorithms",insertion sort
+77,"Programming, Data Structures and Algorithms",mergesort
+78,"Programming, Data Structures and Algorithms",quicksort
+79,"Programming, Data Structures and Algorithms",introduction to graph theory
+80,"Programming, Data Structures and Algorithms",graph traversals
+81,"Programming, Data Structures and Algorithms",shortest path algorithms
+82,Database Management and Warehousing,ER-model
+83,Database Management and Warehousing,relational model: relational algebra
+84,Database Management and Warehousing,tuple calculus
+85,Database Management and Warehousing,SQL
+86,Database Management and Warehousing,integrity constraints
+87,Database Management and Warehousing,normal form
+88,Database Management and Warehousing,file organization
+89,Database Management and Warehousing,indexing
+90,Database Management and Warehousing,data types
+91,Database Management and Warehousing,data transformation such as normalization
+92,Database Management and Warehousing,discretization
+93,Database Management and Warehousing,sampling
+94,Database Management and Warehousing,compression
+95,Database Management and Warehousing,data warehouse modelling: schema for multidimensional data models
+96,Database Management and Warehousing,concept hierarchies
+97,Database Management and Warehousing,measures: categorization and computations
+98,Machine Learning (Supervised),regression and classification problems
+99,Machine Learning (Supervised),simple linear regression
+100,Machine Learning (Supervised),multiple linear regression
+101,Machine Learning (Supervised),ridge regression
+102,Machine Learning (Supervised),logistic regression
+103,Machine Learning (Supervised),k-nearest neighbour
+104,Machine Learning (Supervised),naive Bayes classifier
+105,Machine Learning (Supervised),linear discriminant analysis
+106,Machine Learning (Supervised),support vector machine
+107,Machine Learning (Supervised),decision trees
+108,Machine Learning (Supervised),bias-variance trade-off
+109,Machine Learning (Supervised),leave-one-out (LOO) cross-validation
+110,Machine Learning (Supervised),k-folds cross-validation
+111,Machine Learning (Supervised),multi-layer perceptron
+112,Machine Learning (Supervised),feed-forward neural network
+113,Machine Learning (Unsupervised),clustering algorithms
+114,Machine Learning (Unsupervised),k-means
+115,Machine Learning (Unsupervised),k-medoid
+116,Machine Learning (Unsupervised),hierarchical clustering
+117,Machine Learning (Unsupervised),top-down clustering
+118,Machine Learning (Unsupervised),bottom-up clustering
+119,Machine Learning (Unsupervised),single-linkage
+120,Machine Learning (Unsupervised),multiple-linkage
+121,Machine Learning (Unsupervised),dimensionality reduction
+122,Machine Learning (Unsupervised),principal component analysis
+123,AI,informed search
+124,AI,uninformed search
+125,AI,adversarial search
+126,AI,propositional logic
+127,AI,predicate logic
+128,AI,reasoning under uncertainty — conditional independence representation
+129,AI,exact inference through variable elimination
+130,AI,approximate inference through sampling

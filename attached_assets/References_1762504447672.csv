@@ -1,0 +1,119 @@
+Syllabus_Section,Topic,Resource_Type,Title_Description,URL
+Probability and Statistics,Bayes Theorem,Article,An Intuitive (and Short) Explanation of Bayes’ Theorem,https://betterexplained.com/articles/an-intuitive-and-short-explanation-of-bayes-theorem/ [12]
+Probability and Statistics,Bayes Theorem,Article,"Bayes' Theorem: What It Is, Formula, and Examples",https://www.investopedia.com/terms/b/bayes-theorem.asp [13]
+Probability and Statistics,Bayes Theorem,PDF,Bayes' formula and disease testing (PMC Article),https://pmc.ncbi.nlm.nih.gov/articles/PMC7808025/ [14]
+Probability and Statistics,Conditional Expectation and Variance,PDF,Lecture Note: Conditional Expectation and Conditional Variance,https://www.uomustansiriyah.edu.iq/media/lectures/6/6_2021_03_20!05_15_39_PM.pdf [7]
+Probability and Statistics,Conditional Expectation and Variance,PDF,Lecture Note: Conditional Expectation and Variance (Properties),https://nobel.web.unc.edu/wp-content/uploads/sites/13591/2025/09/Conditional-Expectation-and-Variance.pdf [8]
+Probability and Statistics,Conditional Expectation and Variance,PDF,MIT OCW: Conditional Variance as a random variable,https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/b343ddecdd393da2822aecd2608eb5f0_MITRES_6_012S18_L13AS.pdf [15]
+Probability and Statistics,"Discrete Distributions (Bernoulli, Binomial)",Article,Poisson vs. Binomial Distribution: Key Differences,https://towardsdatascience.com/probability-distributions-poisson-vs-binomial-distribution-ff8a6ddeb4a1/ [16]
+Probability and Statistics,Discrete/Continuous Distributions,Article,"Understanding Probability Distributions (Binomial, Poisson, Normal)",https://www.statology.org/a-complete-guide-to-understanding-probability-distributions/ [17]
+Probability and Statistics,Discrete/Continuous Distributions,Article,Overview of common statistical distributions (PMC Article),https://pmc.ncbi.nlm.nih.gov/articles/PMC4387424/ [18]
+Probability and Statistics,Conditional PDF,Article,Conditional PDF (GeeksforGeeks) - 3-step calculation,https://www.geeksforgeeks.org/engineering-mathematics/conditional-pdf/ [5]
+Probability and Statistics,Conditional PDF,Article,Conditional PDF (ProbabilityCourse.com),https://www.probabilitycourse.com/chapter5/5_2_3_conditioning_independence.php [6]
+Probability and Statistics,Conditional PDF,Video,Conditional probability density functions (Mike Dabkowski),https://www.youtube.com/watch?v=mlRRilWFgp4 [19]
+Probability and Statistics,Central Limit Theorem (CLT),Video,"The Central Limit Theorem, Clearly Explained!!! (StatQuest)",https://www.youtube.com/watch?v=YAlJCEDH2uY [20]
+Probability and Statistics,Central Limit Theorem (CLT),Video,But what is the Central Limit Theorem? (3Blue1Brown),https://www.youtube.com/watch?v=zeJD6dqJ5lo 21
+Probability and Statistics,Central Limit Theorem (CLT),Video,Central Limit Theorem Explained (Simple Learning Pro),https://www.youtube.com/watch?v=ivd8wEHnMCg [22]
+Probability and Statistics,"Hypothesis Testing (z-test, t-test, chi-squared)",Article,T-Test vs Chi-Square: What’s the Difference?,https://builtin.com/data-science/t-test-vs-chi-square [23]
+Probability and Statistics,"Hypothesis Testing (z-test, t-test, chi-squared)",PDF,"The derivation and choice of appropriate test statistic (z, t, f and chi-square)",https://eajournals.org/ejsp/vol-8-issue-1-april-2020/the-derivation-and-choice-of-appropriate-test-statistic-z-t-f-and-chi-square-test-in-research-methodology/ 24
+Probability and Statistics,"Hypothesis Testing (z-test, t-test, chi-squared)",PDF,Choosing the Correct Statistical Test (PMC Article),https://pmc.ncbi.nlm.nih.gov/articles/PMC8327789/ [25]
+Linear Algebra,Eigenvalues and Eigenvectors,Video,Introduction to Eigenvalues and Eigenvectors (Khan Academy),https://www.youtube.com/watch?v=PhfbEr2btGQ [26]
+Linear Algebra,Eigenvalues and Eigenvectors,Video,Introduction to Eigenvalues and Eigenvectors – Part 1 (patrickJMT),https://www.youtube.com/watch?v=G4N8vJpf7hM&vl=en [27]
+Linear Algebra,Eigenvalues and Eigenvectors,Video,Eigen values & Eigen vectors (Ganitya),https://www.youtube.com/watch?v=sLaqiA_l0tQ [28]
+Linear Algebra,Eigenvalues and Eigenvectors,Video,Shortcut to find Eigenvalues (MathsShorts),https://www.youtube.com/shorts/_MGnm8bEQOs [29]
+Linear Algebra,Singular Value Decomposition (SVD),Article,"Singular Value Decomposition (SVD), Demystified",https://towardsdatascience.com/singular-value-decomposition-svd-demystified-57fc44b802a0 [30]
+Linear Algebra,Singular Value Decomposition (SVD),Article,Intuitive Explanation of SVD and its relation to PCA,https://gregorygundersen.com/blog/2018/12/10/svd/ [31]
+Linear Algebra,Singular Value Decomposition (SVD),Article,Singular Value Decomposition (Wikipedia) - Geometric intuition,https://en.wikipedia.org/wiki/Singular_value_decomposition 32
+Linear Algebra,Singular Value Decomposition (SVD),PDF,The Extraordinary SVD (Applications of SVD),https://people.maths.ox.ac.uk/porterm/papers/s4.pdf [33]
+Linear Algebra,LU Decomposition,PDF,Comparison of matrix decomposition algorithms (SVD vs LU),https://scispace.com/pdf/comparison-of-matrix-decomposition-algorithms-1i2fjwnucr.pdf [34]
+Linear Algebra,LU Decomposition,Article,SVD advantages in comparison to LU decomposition,https://scielo.org.za/scielo.php?script=sci_arttext&pid=S2225-62532012001000004 [35]
+Linear Algebra,Idempotent and Partition Matrices,PDF,The Matrix Cookbook (Section 9.4: Idempotent Matrices),https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf [4]
+Linear Algebra,Idempotent and Partition Matrices,PDF,Lecture Note: Idempotent and Projection Matrices (Properties),https://www.biostat.jhsph.edu/~iruczins/teaching/140.751/notes/ch2.pdf 2
+Linear Algebra,Idempotent and Partition Matrices,PDF,Properties of Idempotent Matrix (ResearchGate),https://www.researchgate.net/publication/247372586_Properties_of_Idempotent_Matrix [36]
+Linear Algebra,Idempotent and Partition Matrices,PDF,Partitioned Inverse Matrix Properties,https://pages.stern.nyu.edu/~wgreene/Text/Edition7/Z01_GREE5381_07_SE_APP_A-C-checked.pdf [3]
+Linear Algebra,Quadratic Forms,Article,Quadratic forms (Math LibreTexts) - Connection to Covariance,https://math.libretexts.org/Bookshelves/Linear_Algebra/Understanding_Linear_Algebra_(Austin)/07%3A_The_Spectral_Theorem_and_singular_value_decompositions/7.02%3A_Quadratic_forms [37]
+Linear Algebra,Quadratic Forms,Article,Quadratic forms (Understanding Linear Algebra) - q(x) = x * (A*x),https://understandinglinearalgebra.org/sec-quadratic-forms.html [38]
+Linear Algebra,Quadratic Forms,Article,Quadratic form (Wikipedia) - Formal Definition x^T * A * x,https://en.wikipedia.org/wiki/Quadratic_form [39]
+Linear Algebra,Quadratic Forms,PDF,Lecture Note: Bilinear and Quadratic Forms,https://dummit.cos.northeastern.edu/docs/linalgthy_5_bilinear_and_quadratic_forms.pdf [40]
+Calculus and Optimization,Taylor Series,Article,A Gentle Introduction to Taylor Series (Machine Learning Mastery),https://machinelearningmastery.com/a-gentle-introduction-to-taylor-series/ [41]
+Calculus and Optimization,Taylor Series,Article,Understanding the Taylor Series and Its Applications in Machine Learning,https://karobben.github.io/2024/08/09/AI/taylorseries/ [42]
+Calculus and Optimization,Taylor Series,Article,Taylor Series in AI (Connection to Gradient Descent),https://towardsai.net/p/artificial-intelligence/taylor-series-in-ai [43]
+Calculus and Optimization,Taylor Series,PDF,Taylor Series Application in Gradient Descent Optimization,https://www.navyajha.com/content/files/2024/02/Taylor-Series-Paper.pdf 44
+Calculus and Optimization,Maxima and Minima (Single Variable),PDF,MIT OCW: Calculus Textbook (Ch. 3: Max/Min Problems),https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/pages/textbook/ [45]
+Calculus and Optimization,Maxima and Minima (Single Variable),Video,Finding Absolute Maximum and Minimum Values on a Closed Interval,https://www.youtube.com/watch?v=3wrXDw5ETh4 [46]
+Calculus and Optimization,Maxima and Minima (Single Variable),Video,How to find local maxima and minima using differentiation,https://www.youtube.com/watch?v=pvLj1s7SOtk [47]
+Calculus and Optimization,Maxima and Minima (Single Variable),Video,Maxima-Minima Problems Shortcuts (GillesaniaEngineeringVideos),https://www.youtube.com/watch?v=90NGK3R7UAU [48]
+Calculus and Optimization,Maxima and Minima (Single Variable),PDF,Single-variable Optimization Problems and Solutions,http://www3.wabash.edu/econapp/econ75/chapters/chap03/c3lab.pdf [49]
+"Programming, DSA","Basic Data Structures (Stacks, Queues, Linked Lists, Trees, Hash Tables)",Article,Common Python Data Structures (Guide) (Real Python),https://realpython.com/python-data-structures/ [50]
+"Programming, DSA","Basic Data Structures (Stacks, Queues, Linked Lists, Trees, Hash Tables)",Article,Python Data Structures Tutorial (Codecademy),https://www.codecademy.com/article/python-data-structures [51]
+"Programming, DSA","Basic Data Structures (Stacks, Queues, Linked Lists, Trees, Hash Tables)",Article,Python Data Structures Tutorial (DataCamp),https://www.datacamp.com/tutorial/python-linked-lists [52]
+"Programming, DSA","Search Algorithms (Linear, Binary)",GitHub,TheAlgorithms/Python (Searches Folder),https://github.com/TheAlgorithms/Python/tree/master/searches 53
+"Programming, DSA","Search Algorithms (Linear, Binary)",GitHub,dsa-python (Implementations of search algorithms),https://github.com/Vishesh-Pandey/dsa-python [54]
+"Programming, DSA","Search Algorithms (Linear, Binary)",Article,Binary Search in Python (Iterative and Recursive),https://www.datacamp.com/tutorial/binary-search-python [55]
+"Programming, DSA","Sorting Algorithms (Selection, Bubble, Insertion)",Gist,"Sorting algorithms, implemented in Python (Bubble, Selection, Insertion)",https://gist.github.com/05d7818801df917b8f3bbb07b6b2eb96 56
+"Programming, DSA","Sorting Algorithms (Mergesort, Quicksort)",Gist,"Sorting algorithms, implemented in Python (Merge, Quick)",https://gist.github.com/05d7818801df917b8f3bbb07b6b2eb96 56
+"Programming, DSA",Sorting Algorithms (All),GitHub,TheAlgorithms/Python (Sorts Folder),https://github.com/TheAlgorithms/Python/tree/master/sorts 53
+"Programming, DSA",Sorting Algorithms (All),GitHub,python-sorting-analyzer (Plots performance of algorithms),https://github.com/msmrexe/python-sorting-analyzer 57
+"Programming, DSA",Introduction to Graph Theory,PDF,Textbook: Graph Theory with Algorithms and its Applications,https://doc.lagout.org/science/0_Computer%20Science/2_Algorithms/Graph%20Theory%20with%20Algorithms%20and%20its%20Applications_%20In%20Applied%20Science%20and%20Technology%20%5BRay%202012-11-02%5D.pdf [58]
+"Programming, DSA",Introduction to Graph Theory,PDF,Lecture Note: Introduction to Graph Theory (Wilson),
+"Programming, DSA",Introduction to Graph Theory,PDF,"Textbook: Graph Theory (Bondy, Murty)",https://www.zib.de/userpage/groetschel/teaching/WS1314/BondyMurtyGTWA.pdf [60]
+"Programming, DSA","Graph Algorithms (Traversals, Shortest Path)",Video,"Master Graph Algorithms for Technical Interviews (BFS, DFS, Dijkstra)",https://www.youtube.com/watch?v=KGWJrkK-QVU [61]
+"Programming, DSA","Graph Algorithms (Traversals, Shortest Path)",Video,Dijkstra's shortest path algorithm with python code,https://www.youtube.com/watch?v=7z3Eg5xiy4U [62]
+"Programming, DSA","Graph Algorithms (Traversals, Shortest Path)",Video,Graph Data Structure Introduction (Codebasics),https://www.youtube.com/watch?v=j0IYCyBdzfA [63]
+"Programming, DSA","Graph Algorithms (Traversals, Shortest Path)",GitHub,Codebasics Graph Algorithm Implementations,https://github.com/codebasics/data-structures-algorithms-python/tree/master/data_structures/10_Graph/graph [63]
+"Programming, DSA","Graph Algorithms (Traversals, Shortest Path)",Video,Shortest Path using BFS Algorithm (Python Program),https://www.youtube.com/watch?v=IQJjEdF95_o [64]
+DBMS and Warehousing,ER-model to Relational Model Mapping,Article,Implementing Entity-Relationship Diagrams (Mapping Rules),https://pressbooks.pub/cmiller1137/chapter/implementing-entity-relationship-diagrams/ [65]
+DBMS and Warehousing,ER-model to Relational Model Mapping,Video,Convert an Entity Relational diagram into the Relational Data Model,https://www.youtube.com/watch?v=CZTkgMoqVss [66]
+DBMS and Warehousing,ER-model to Relational Model Mapping,Article,"ERD to Relational Model (Entities, Weak Entities)",https://runestone.academy/ns/books/published/practical_db/PART2_DATA_MODELING/03-ERD-to-relational/ERD-to-relational.html [67]
+DBMS and Warehousing,Relational Algebra and Tuple Calculus,PDF,Relational Algebra and Relational Calculus (Procedural vs Declarative),https://web.eecs.utk.edu/~bvanderz/teaching/cs465Fa18/notes/ch05.pdf [68]
+DBMS and Warehousing,Relational Algebra and Tuple Calculus,PDF,"The Relational Algebra (Operations: σ, π, ρ, ∪)",https://www.cs.purdue.edu/homes/bb/cs448_Fall2016/lecture-files/pdf/ch06-The%20Relational%20Algebra%20and%20Calculus.pdf [69]
+DBMS and Warehousing,Relational Algebra and Tuple Calculus,PDF,Tuple Relational Calculus (Formula: `{t,
+DBMS and Warehousing,Relational Algebra and Tuple Calculus,PDF,Tutorial: Relational Algebra and Calculus (Practice Problems),https://www.inf.ed.ac.uk/teaching/courses/inf1/da/2013-2014/tutorials/inf1-da-13-t3.pdf [71]
+DBMS and Warehousing,"Normal Form (1NF, 2NF, 3NF, BCNF)",Article,"Database Normalization: 1NF, 2NF, 3NF & BCNF Examples (DigitalOcean)",https://www.digitalocean.com/community/tutorials/database-normalization [72]
+DBMS and Warehousing,"Normal Form (1NF, 2NF, 3NF, BCNF)",Article,Understanding Database Normalization (1NF to BCNF),https://medium.com/@artemkhrenov/understanding-database-normalization-from-1nf-to-bcnf-3893fac16fc9 [73]
+DBMS and Warehousing,"Normal Form (1NF, 2NF, 3NF, BCNF)",Article,Database normalization (Wikipedia),https://en.wikipedia.org/wiki/Database_normalization [74]
+DBMS and Warehousing,"Normal Form (1NF, 2NF, 3NF, BCNF)",Article,Database Normalization (freeCodeCamp),https://www.freecodecamp.org/news/database-normalization-1nf-2nf-3nf-table-examples/ [75]
+DBMS and Warehousing,"Data Transformation (Normalization, Discretization, Sampling)",PDF,"Textbook Chapter: Data Preprocessing (See Sec 3.4.8 Sampling, 3.5.2 Normalization, 3.5.3 Discretization)",http://hanj.cs.illinois.edu/cs412/bk3/03.pdf 9
+DBMS and Warehousing,"Data Transformation (Normalization, Discretization, Sampling)",Article,Data Preprocessing in Data Mining (GeeksforGeeks),https://www.geeksforgeeks.org/data-science/data-preprocessing-in-data-mining/ [10]
+DBMS and Warehousing,"Data Transformation (Normalization, Discretization, Sampling)",Article,Data Pre-processing Tools and Techniques,https://kuey.net/index.php/kuey/article/download/4669/3150/10152 [11]
+DBMS and Warehousing,Data Warehouse Modelling (Schema),Video,What is STAR schema,
+DBMS and Warehousing,Data Warehouse Modelling (Schema),Video,Star Schema vs Snowflake Schema,
+DBMS and Warehousing,Data Warehouse Modelling (Schema),Video,Star vs Snowflake Schema (Trade-offs explained),https://www.youtube.com/watch?v=529MqZgvgug [78]
+Machine Learning,Supervised Learning Overview,PDF,Classic Machine Learning Methods (Chapter: Lists all algorithms),https://www.ncbi.nlm.nih.gov/books/NBK597496/ [79]
+Machine Learning,Supervised Learning Overview,Article,Supervised Machine Learning (GeeksforGeeks),
+Machine Learning,"Regression (Linear, Multiple, Ridge)",Article,Popular Machine Learning Algorithms (Linear Regression),https://dedekurniawann.medium.com/popular-machine-learning-algorithms-supervised-and-unsupervised-learning-766120e96d49 [81]
+Machine Learning,"Classification (Logistic, k-NN)",Article,"Popular Machine Learning Algorithms (Logistic, SVM, KNN)",https://dedekurniawann.medium.com/popular-machine-learning-algorithms-supervised-and-unsupervised-learning-766120e96d49 [81]
+Machine Learning,"Classification (Naive Bayes, LDA)",PDF,"Classic Machine Learning Methods (Lists Naive Bayes, LDA)",https://www.ncbi.nlm.nih.gov/books/NBK597496/ [79]
+Machine Learning,"Classification (SVM, Decision Trees)",Article,"Supervised Machine Learning (SVM, Decision Trees)",https://www.geeksforgeeks.org/machine-learning/supervised-machine-learning/ [80]
+Machine Learning,Bias-Variance Trade-off,Video,"Bias and Variance, Clearly Explained (StatQuest)",https://www.youtube.com/watch?v=EuBBz3bI-aA&vl=en 82
+Machine Learning,Bias-Variance Trade-off,Video,Bias-Variance Tradeoff (Intellipaat),https://www.youtube.com/watch?v=IAJoJR0KIGs [83]
+Machine Learning,Cross-Validation,Video,How Does Cross-Validation Relate To Bias-Variance?,https://www.youtube.com/watch?v=J7LFxuY1Tm4 [84]
+Machine Learning,Cross-Validation,Video,"Bias vs. variance tradeoff, basic cross-validation and overfitting",https://www.youtube.com/watch?v=jiQamxz2ZcQ [85]
+Machine Learning,"Neural Networks (MLP, Feed-forward)",PDF,Lecture Note: Feed-forward neural networks (MLP),https://amfarahmand.github.io/csc311/misc/nn_notes.pdf [86]
+Machine Learning,"Neural Networks (MLP, Feed-forward)",PDF,Lecture Note: Feedforward Neural Networks (MLPs),https://www.math.uh.edu/~dlabate/Lecture_6373_01.pdf [87]
+Machine Learning,"Neural Networks (MLP, Feed-forward)",PDF,Lecture Note: Multi-layer-neural-networks (Activations),https://engineering.purdue.edu/ChanGroup/ECE595/files/Lecture18_MLP.pdf [88]
+Machine Learning,Unsupervised Learning (k-Means),PDF,"Lecture Note: The k-means algorithm (Steps 1-4, Strengths/Weaknesses)",https://www.mit.edu/~9.54/fall14/slides/Class13.pdf [89]
+Machine Learning,Unsupervised Learning (Clustering),PDF,"Lecture Note: Clustering methods (Hierarchical, K-means)",https://www.cs.cmu.edu/~10601b/slides/clustering.pdf [90]
+Machine Learning,Unsupervised Learning (Clustering),PDF,"Lecture Note: Unsupervised Learning (K-means, Hierarchical)",https://www.science.smith.edu/~jcrouser/SDS293/lectures/22-clustering.pdf [91]
+Machine Learning,Dimensionality Reduction (PCA),Article,Principal Component Analysis (PCA): A Step-by-Step Explanation,https://builtin.com/data-science/step-step-explanation-principal-component-analysis 92
+Machine Learning,Dimensionality Reduction (PCA),Article,Principal Component Analysis for Dummies (Intuition),
+Machine Learning,Dimensionality Reduction (PCA),PDF,A Tutorial on Principal Component Analysis (Academic),https://pmc.ncbi.nlm.nih.gov/articles/PMC4792409/ 94
+Machine Learning,Dimensionality Reduction (PCA),Article,Principal Component Analysis (IBM) - Applications,https://www.ibm.com/think/topics/principal-component-analysis [95]
+AI,"Search (Informed, Uninformed, Adversarial)",Video,Informed vs Uninformed vs Adversarial Search With Examples (Gate Smashers),https://www.youtube.com/watch?v=YatDNnaJ1TU [96]
+AI,"Search (Informed, Uninformed, Adversarial)",Video,AI Search Algorithms,
+AI,"Search (Informed, Uninformed, Adversarial)",Video,Comparison of Informed vs Uninformed Search,https://www.youtube.com/watch?v=uZCVHAeFD-8 [98]
+AI,"Search (Informed, Uninformed, Adversarial)",Video,Adversarial Search (Minimax) - Competitive Environments,https://www.youtube.com/watch?v=PyBJ5XBfsS4 [99]
+AI,"Logic (Propositional, Predicate)",Article,Understanding Logical Representation: Propositional vs Predicate Logic,https://medium.com/@abi12subramaniam/understanding-logical-representation-in-ai-propositional-and-predicate-logic-explained-49ff816324e4 [100]
+AI,"Logic (Propositional, Predicate)",Article,Propositional and Predicate Logic Primer (Formal Definitions),
+AI,"Logic (Propositional, Predicate)",Article,Predicate Logic in AI (Applied AI Course),https://www.appliedaicourse.com/blog/predicate-logic-in-ai/ [102]
+AI,"Logic (Propositional, Predicate)",Article,Propositional Logic in AI (GeeksforGeeks) - Modus Ponens/Tollens,https://www.geeksforgeeks.org/artificial-intelligence/propositional-logic-in-artificial-intelligence/ [103]
+AI,Reasoning Under Uncertainty (Conditional Independence),PDF,Lecture Note: Reasoning under Uncertainty (Motivation for Bayes Nets),http://www.cs.utoronto.ca/~torsten/csc384-f11/lectures/csc384f11-Lecture07-Uncertainty-I_4up.pdf [104]
+AI,Reasoning Under Uncertainty (Conditional Independence),PDF,Lecture Note: Reasoning Under Uncertainty (Exploiting Independencies),https://www.techfak.uni-bielefeld.de/~skopp/Lehre/Uncertain_SS12/Uncertain_VL4.pdf [105]
+AI,Reasoning Under Uncertainty (Conditional Independence),PDF,Lecture Note: Examples of Conditional Independence,https://www.cs.ubc.ca/~kevinlb/teaching/cs322%20-%202005-6/Lectures/lect25.pdf [106]
+AI,Exact Inference (Variable Elimination),Article,The Variable Elimination Algorithm (Step-by-step),https://ermongroup.github.io/cs228-notes/inference/ve/ [107]
+AI,Exact Inference (Variable Elimination),PDF,Lecture Note: Variable Elimination Algorithm (Sum out example),
+AI,Exact Inference (Variable Elimination),Video,Variable elimination examples (Worked problems),https://www.youtube.com/watch?v=w4sJ8SazmFo [109]
+AI,Approximate Inference (Sampling),Article,Approximate Inference in Bayes Nets: Sampling (Motivation),https://inst.eecs.berkeley.edu/~cs188/textbook/bayes-nets/approximate.html [110]
+AI,Approximate Inference (Sampling),Article,Approximate Inference in Bayesian Networks (Monte Carlo),https://www.geeksforgeeks.org/artificial-intelligence/approximate-inference-in-bayesian-networks/ [111]
+AI,Approximate Inference (Sampling),PDF,Thesis: Approximate inference in probabilistic models,http://www.diva-portal.org/smash/get/diva2:1262062/FULLTEXT01.pdf [112]
+AI,Approximate Inference (Sampling),Video,Approximate Inference (GATE DA),https://www.youtube.com/watch?v=wU0oJtaexUw [113]
