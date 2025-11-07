@@ -33,6 +33,7 @@ export const scheduleItems = pgTable("schedule_items", {
   studyType: text("study_type").notNull(),
   studyHours: text("study_hours").notNull(),
   completed: integer("completed").notNull().default(0),
+  sortOrder: integer("sort_order").notNull().default(0),
 });
 
 export const references = pgTable("references", {

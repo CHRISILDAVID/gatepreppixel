@@ -8,8 +8,19 @@ import {
   type Reference,
   type InsertReference,
   type UpdateTopic,
+  topics,
+  studySessions,
+  scheduleItems,
+  references,
 } from "@shared/schema";
 import { randomUUID } from "crypto";
+import { drizzle } from "drizzle-orm/neon-serverless";
+import { neonConfig, Pool } from "@neondatabase/serverless";
+import { eq } from "drizzle-orm";
+import ws from "ws";
+
+// Configure WebSocket for Neon serverless
+neonConfig.webSocketConstructor = ws;
 
 export interface IStorage {
   getAllTopics(): Promise<Topic[]>;
@@ -20,115 +31,124 @@ export interface IStorage {
   getAllSessions(): Promise<StudySession[]>;
   getSession(id: string): Promise<StudySession | undefined>;
   createSession(session: InsertStudySession): Promise<StudySession>;
+  deleteSession(id: string): Promise<boolean>;
 
   getAllScheduleItems(): Promise<ScheduleItem[]>;
   getScheduleItem(id: string): Promise<ScheduleItem | undefined>;
   createScheduleItem(item: InsertScheduleItem): Promise<ScheduleItem>;
   updateScheduleItem(id: string, completed: number): Promise<ScheduleItem | undefined>;
+  deleteAllScheduleItems(): Promise<void>;
 
   getAllReferences(): Promise<Reference[]>;
   getReference(id: string): Promise<Reference | undefined>;
   createReference(reference: InsertReference): Promise<Reference>;
 }
 
-export class MemStorage implements IStorage {
-  private topics: Map<string, Topic>;
-  private sessions: Map<string, StudySession>;
-  private scheduleItems: Map<string, ScheduleItem>;
-  private references: Map<string, Reference>;
+export class DatabaseStorage implements IStorage {
+  private db: ReturnType<typeof drizzle>;
 
   constructor() {
-    this.topics = new Map();
-    this.sessions = new Map();
-    this.scheduleItems = new Map();
-    this.references = new Map();
+    if (!process.env.DATABASE_URL) {
+      throw new Error("DATABASE_URL environment variable is required");
+    }
+    const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+    this.db = drizzle(pool);
   }
 
   async getAllTopics(): Promise<Topic[]> {
-    return Array.from(this.topics.values());
+    return this.db.select().from(topics);
   }
 
   async getTopic(id: string): Promise<Topic | undefined> {
-    return this.topics.get(id);
+    const result = await this.db.select().from(topics).where(eq(topics.id, id));
+    return result[0];
   }
 
   async createTopic(insertTopic: InsertTopic): Promise<Topic> {
     const id = `topic-${randomUUID()}`;
-    const topic: Topic = { ...insertTopic, id };
-    this.topics.set(id, topic);
-    return topic;
+    const result = await this.db.insert(topics).values({ ...insertTopic, id }).returning();
+    return result[0];
   }
 
   async updateTopic(id: string, data: UpdateTopic): Promise<Topic | undefined> {
-    const topic = this.topics.get(id);
-    if (!topic) return undefined;
-
-    const updated: Topic = {
-      ...topic,
-      completed: data.completed,
-      confidence: data.confidence,
-    };
-    this.topics.set(id, updated);
-    return updated;
+    const result = await this.db
+      .update(topics)
+      .set(data)
+      .where(eq(topics.id, id))
+      .returning();
+    return result[0];
   }
 
   async getAllSessions(): Promise<StudySession[]> {
-    return Array.from(this.sessions.values());
+    return this.db.select().from(studySessions);
   }
 
   async getSession(id: string): Promise<StudySession | undefined> {
-    return this.sessions.get(id);
+    const result = await this.db.select().from(studySessions).where(eq(studySessions.id, id));
+    return result[0];
   }
 
   async createSession(insertSession: InsertStudySession): Promise<StudySession> {
     const id = `session-${randomUUID()}`;
-    const session: StudySession = {
-      ...insertSession,
-      id,
-      createdAt: new Date(),
-    };
-    this.sessions.set(id, session);
-    return session;
+    const result = await this.db
+      .insert(studySessions)
+      .values({ ...insertSession, id })
+      .returning();
+    return result[0];
+  }
+
+  async deleteSession(id: string): Promise<boolean> {
+    const result = await this.db
+      .delete(studySessions)
+      .where(eq(studySessions.id, id))
+      .returning();
+    return result.length > 0;
   }
 
   async getAllScheduleItems(): Promise<ScheduleItem[]> {
-    return Array.from(this.scheduleItems.values());
+    const items = await this.db.select().from(scheduleItems);
+    // Sort by sortOrder to maintain CSV insertion order
+    return items.sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
   }
 
   async getScheduleItem(id: string): Promise<ScheduleItem | undefined> {
-    return this.scheduleItems.get(id);
+    const result = await this.db.select().from(scheduleItems).where(eq(scheduleItems.id, id));
+    return result[0];
   }
 
   async createScheduleItem(insertItem: InsertScheduleItem): Promise<ScheduleItem> {
     const id = `schedule-${randomUUID()}`;
-    const item: ScheduleItem = { ...insertItem, id };
-    this.scheduleItems.set(id, item);
-    return item;
+    const result = await this.db.insert(scheduleItems).values({ ...insertItem, id }).returning();
+    return result[0];
   }
 
   async updateScheduleItem(id: string, completed: number): Promise<ScheduleItem | undefined> {
-    const item = this.scheduleItems.get(id);
-    if (!item) return undefined;
+    const result = await this.db
+      .update(scheduleItems)
+      .set({ completed })
+      .where(eq(scheduleItems.id, id))
+      .returning();
+    return result[0];
+  }
 
-    const updated: ScheduleItem = { ...item, completed };
-    this.scheduleItems.set(id, updated);
-    return updated;
+  async deleteAllScheduleItems(): Promise<void> {
+    await this.db.delete(scheduleItems);
   }
 
   async getAllReferences(): Promise<Reference[]> {
-    return Array.from(this.references.values());
+    return this.db.select().from(references);
   }
 
   async getReference(id: string): Promise<Reference | undefined> {
-    return this.references.get(id);
+    const result = await this.db.select().from(references).where(eq(references.id, id));
+    return result[0];
   }
 
   async createReference(insertReference: InsertReference): Promise<Reference> {
     const id = `ref-${randomUUID()}`;
-    const reference: Reference = { ...insertReference, id };
-    this.references.set(id, reference);
-    return reference;
+    const result = await this.db.insert(references).values({ ...insertReference, id }).returning();
+    return result[0];
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();

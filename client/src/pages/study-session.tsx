@@ -1,8 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -20,14 +19,14 @@ export default function StudySession() {
   const [selectedTopic, setSelectedTopic] = useState<string>("");
   const [notes, setNotes] = useState("");
   const [startTime, setStartTime] = useState("");
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const { data: topics } = useQuery<Topic[]>({
     queryKey: ["/api/topics"],
   });
 
-  const subjects = Array.from(new Set(topics?.map((t) => t.subject) || []));
-  const filteredTopics = topics?.filter((t) => t.subject === selectedSubject) || [];
+  const subjects = Array.from(new Set(topics?.map((t) => t.subject) || [])).sort();
+  const filteredTopics = (topics?.filter((t) => t.subject === selectedSubject) || [])
+    .sort((a, b) => a.number - b.number);
 
   const createSessionMutation = useMutation({
     mutationFn: async (data: any) => {
@@ -224,17 +223,6 @@ export default function StudySession() {
               placeholder="Add notes about your study session..."
               className="border-2 border-foreground min-h-24"
               data-testid="input-notes"
-            />
-          </div>
-
-          <div>
-            <Label className="text-sm font-bold mb-2 block">IMAGE PROOF (COMING SOON)</Label>
-            <Input
-              type="file"
-              accept="image/*"
-              ref={fileInputRef}
-              disabled
-              className="border-2 border-foreground opacity-50"
             />
           </div>
         </div>
