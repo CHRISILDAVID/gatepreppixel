@@ -13,6 +13,19 @@ interface TimerState {
 const STORAGE_KEY = "study-timer-state";
 
 function loadTimerState(): TimerState {
+  // Check if we're in the browser environment
+  if (typeof window === 'undefined') {
+    return {
+      startTime: "",
+      sessionStartedAt: null,
+      pausedDuration: 0,
+      pausedAt: null,
+      selectedSubject: "",
+      selectedTopic: "",
+      notes: "",
+    };
+  }
+
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
@@ -34,6 +47,9 @@ function loadTimerState(): TimerState {
 }
 
 function saveTimerState(state: TimerState) {
+  // Check if we're in the browser environment
+  if (typeof window === 'undefined') return;
+  
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   } catch (error) {
@@ -58,18 +74,48 @@ function calculateElapsedSeconds(state: TimerState): number {
 }
 
 export function useStudyTimer() {
-  const [state, setState] = useState<TimerState>(loadTimerState);
-  const [displaySeconds, setDisplaySeconds] = useState<number>(() => calculateElapsedSeconds(loadTimerState()));
+  const [state, setState] = useState<TimerState>(() => {
+    // Initialize with default state on server, load from localStorage on client
+    if (typeof window === 'undefined') {
+      return {
+        startTime: "",
+        sessionStartedAt: null,
+        pausedDuration: 0,
+        pausedAt: null,
+        selectedSubject: "",
+        selectedTopic: "",
+        notes: "",
+      };
+    }
+    return loadTimerState();
+  });
+  
+  const [displaySeconds, setDisplaySeconds] = useState<number>(0);
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  // Handle hydration
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const loadedState = loadTimerState();
+      setState(loadedState);
+      setDisplaySeconds(calculateElapsedSeconds(loadedState));
+      setIsHydrated(true);
+    }
+  }, []);
 
   const isRunning = state.sessionStartedAt !== null && state.pausedAt === null;
 
-  // Sync state to localStorage whenever it changes
+  // Sync state to localStorage whenever it changes (only on client)
   useEffect(() => {
-    saveTimerState(state);
-  }, [state]);
+    if (isHydrated) {
+      saveTimerState(state);
+    }
+  }, [state, isHydrated]);
 
   // Timer tick effect - updates display every second
   useEffect(() => {
+    if (!isHydrated) return;
+    
     let interval: NodeJS.Timeout;
     if (isRunning) {
       interval = setInterval(() => {
@@ -79,7 +125,7 @@ export function useStudyTimer() {
       setDisplaySeconds(calculateElapsedSeconds(state));
     }
     return () => clearInterval(interval);
-  }, [isRunning, state]);
+  }, [isRunning, state, isHydrated]);
 
   const startTimer = useCallback((startTime: string) => {
     setState((prev) => {
@@ -113,7 +159,7 @@ export function useStudyTimer() {
   }, []);
 
   const resetTimer = useCallback(() => {
-    setState({
+    const newState = {
       startTime: "",
       sessionStartedAt: null,
       pausedDuration: 0,
@@ -121,9 +167,12 @@ export function useStudyTimer() {
       selectedSubject: "",
       selectedTopic: "",
       notes: "",
-    });
+    };
+    setState(newState);
     setDisplaySeconds(0);
-    localStorage.removeItem(STORAGE_KEY);
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem(STORAGE_KEY);
+    }
   }, []);
 
   const updateSubject = useCallback((subject: string) => {
